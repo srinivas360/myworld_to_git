@@ -1,0 +1,13 @@
+0. for actival vertual environment = Scripts\activate 
+1.virtual env: py -m venv "folder name", install django, django-admin startproject "project name"
+2.views, url
+3.template return: in settings mention 'templates' directory
+4.apps: python manage.py startapp "app name", create url file in newly created "app"( later register this app in settings at installed_apps)
+5. models: represent tables
+6. python manage.py migrate (actual tables created with this command)
+python manage.py makemigrations ( create file with name migrations in app but we first create a model(map to table) )
+7.  python manage.py createsuperuser (later register model in admin file of article folder)
+8. tags (for loop, if logic in html template)
+9. static files( url set, file asset set --- in settings file. first of all keep in url file)
+10. extend template (remove head and body, and move to base template and make use by "extends "base template name")
+11. urls (  )
