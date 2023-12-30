@@ -9,5 +9,5 @@ def article_list(req):
 
 def article_detail(req, slug):
     article = Article.objects.get(slug=slug)
-    print('-article', article, '-all', Article.objects.all())
-    return HttpResponse(article)
+    print('--detail view fun -article', article)
+    return render(req, 'articles/article_detail.html', {'article': article})

@@ -1,0 +1,16 @@
+{% extends "base_layout.html" %}
+{% block content %}
+<div class="article-detail">
+    <h1>=====in detail page ========</h1>
+    <div class="article">
+        <h2>{{article.title}}</h2>
+        <p>{{article.body}}</p>
+    </div>
+     {% comment %} {% for arti in article %}
+        <div class="article">
+            <p>{{arti.title}}</p>
+            <p>{{arti.body}}</p>
+        </div>
+    {%endfor%} {% endcomment %}
+</div>
+{% endblock %}
