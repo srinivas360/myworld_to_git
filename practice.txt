@@ -8,6 +8,7 @@
 python manage.py makemigrations ( create file with name migrations in app but we first create a model(map to table) )
 7.  python manage.py createsuperuser (later register model in admin file of article folder)
 8. tags (for loop, if logic in html template)
-9. static files( url set, file asset set --- in settings file. first of all keep in url file)
+9. static files( url(STATIC_URL) set, file asset(STATICFILES_DIRS) set --- in settings file. first of all keep in url file)
 10. extend template (remove head and body, and move to base template and make use by "extends "base template name")
-11. urls (  )
+11. urls ( named urls at url path for view function, and for specific app urls keep "app_name" in url file of that app  )
+12. media file like static file: here we let know static fun which imported and appended to url in main app, to save  media and access as static file.
