@@ -19,13 +19,18 @@ def sign_up(request):
     return render(request, 'account/signup.html', {'form': form})
 
 def login_view(request):
+    print('--request type', request.method, '--req', request )
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             # log the user in
             user = form.get_user()
             login(request, user)
-            return redirect('articles:list')
+            next = request.POST.get('next')
+            if next:
+                return redirect(next)
+            else:
+                return redirect('articles:list')
     else:
         form = AuthenticationForm()
     return render(request, 'account/login.html', { 'form': form })
