@@ -12,3 +12,6 @@ python manage.py makemigrations ( create file with name migrations in app but we
 10. extend template (remove head and body, and move to base template and make use by "extends "base template name")
 11. urls ( named urls at url path for view function, and for specific app urls keep "app_name" in url file of that app  )
 12. media file like static file: here we let know static fun which imported and appended to url in main app, to save  media and access as static file.
+13. user management:
+a. create app(python manage.py startapp "accounts") and register in settings at installed_apps and then url, view, template create
+b. 
