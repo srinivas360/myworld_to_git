@@ -1,8 +1,15 @@
-{% extends 'base_layout.html' %}
+
+{% extends "base_layout.html" %}
 
 {% block content %}
-    <div class="create-article">
-        <h2>Create an Awesome New Article</h2>
-
-    </div>
-{% endblock %}
+ <h2>Create an Awesome New Article</h2>
+<form action="{%url 'articles:create' %}" class='site-form' method='post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    {% comment %} {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{request.GET.next}}">
+    {% endif %} {% endcomment %}
+    <input type="submit" value="createForm">
+</form>
+{% comment %} <p>Not got an account? <a href="{% url 'accounts:signup' %}">Sign Up</a></p> {% endcomment %}
+{% endblock  %}
