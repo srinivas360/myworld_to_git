@@ -18,4 +18,4 @@ b. decorater(@login_required)(net ninja explained in python course) = added befo
 c. model form( which is help to create form as we have inbuilt forms like login form, here we just import model form from forms file(the file in which we created model form ))
 d. we "enctype" attribute in form tag for "upload type input field". otherwise it won't work
 e. here we do check with model form for input field validation and all like in login we do with "AuthenticationForm". and extra we need to note is that "media won't come in request.POST it come in request.FILES
-F.
+F. foreign key linking
